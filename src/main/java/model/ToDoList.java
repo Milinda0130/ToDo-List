@@ -1,5 +1,7 @@
 package model;
 
+import com.mysql.cj.conf.BooleanProperty;
+import javafx.scene.control.CheckBox;
 import lombok.*;
 
 import java.time.LocalDate;
@@ -13,9 +15,15 @@ import java.time.LocalTime;
 @ToString
 public class ToDoList {
 
-    private String topic;
-    private String Description;
-    private LocalDate date;
-    private LocalTime time;
 
+    private String title;
+    private LocalDate date;
+    private String Description;
+    private CheckBox checkBox;
+
+    public ToDoList(String title, LocalDate date,String description) {
+        this.title = title;
+        this.date = date;
+        Description = description;
+    }
 }
